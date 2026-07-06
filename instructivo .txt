@@ -1,0 +1,432 @@
+
+nota ultima pagina fundacion https://chatgpt.com/share/691bda9d-1cac-800d-9f06-ce59e818a0ab
+
+_______________________________________________________
+
+Opción 1: Una sola página
+
+👉 Todo está en un solo archivo index.html y cada sección se muestra/oculta con JavaScript o se desplaza con anclas #.
+
+Ejemplo:
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fundación Proserco</title>
+  <style>
+    body { font-family: Arial; margin: 0; }
+    nav { background: #007BFF; padding: 10px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 50px; min-height: 100vh; }
+    #inicio { background: #f0f0f0; }
+    #programas { background: #dfefff; }
+    #nosotros { background: #eaf5df; }
+    #contacto { background: #ffe6df; }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#programas">Programas</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Secciones -->
+  <section id="inicio">
+    <h1>Bienvenido a Fundación Proserco</h1>
+    <p>Trabajamos por la comunidad con programas educativos y culturales.</p>
+  </section>
+
+  <section id="programas">
+    <h2>Nuestros programas</h2>
+    <ul>
+      <li>Educación comunitaria</li>
+      <li>Actividades culturales</li>
+      <li>Apoyo a familias</li>
+    </ul>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre nosotros</h2>
+    <p>Somos una fundación comprometida con el desarrollo de la comunidad.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre"><br><br>
+      <input type="email" placeholder="Tu correo"><br><br>
+      <textarea placeholder="Mensaje"></textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</body>
+</html>
+
+
+📌 Instrucción:
+
+Cuando el usuario haga clic en "Programas", lo llevará directo a la sección con id="programas".
+
+Todo sigue en un solo archivo.
+
+styles:
+
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+header {
+  background: #004080;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 10px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hero {
+  background: url('https://picsum.photos/1200/500') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #b1e9bd2d;
+  color: rgb(74, 37, 240);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.cards, .programas-grid, .noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.card, .programa, .noticia {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+.contact-form input, .contact-form textarea {
+  margin: 10px 0;
+  padding: 10px;
+}
+button {
+  background: #004080;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+_______________________________________________________________________________________________
+
+
+
+Opción 2: Varias páginas (con archivos separados)
+
+👉 Cada sección se convierte en un archivo diferente (inicio.html, programas.html, nosotros.html, contacto.html).
+
+Ejemplo index.html (menú principal):
+
+<nav>
+  <a href="inicio.html">Inicio</a>
+  <a href="programas.html">Programas</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+
+Luego creas los demás archivos:
+
+📌 programas.html
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Programas - Fundación Proserco</title>
+</head>
+<body>
+  <h1>Programas</h1>
+  <p>Aquí van los detalles de los programas...</p>
+  <a href="index.html">Volver al inicio</a>
+</body>
+</html>
+
+
+Y así para cada sección.
+
+👉 Diferencia rápida:
+
+Opción 1 (anclas) → Todo en un solo archivo, más fácil si la página es pequeña.
+
+Opción 2 (páginas separadas) → Mejor si quieres que cada sección tenga su propia página independiente.
+
+styles:
+
+/* Reseteo y estilo general */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  color: blue;
+  text-align: center;
+  background-size: cover;           /* Ajusta la imagen al tamaño de la pantalla */
+  background-position: center;      /* Centra la imagen */
+  background-repeat: no-repeat;     /* No repite la imagen */
+  min-height: 100vh;
+}
+
+/* Oscurecer un poco para legibilidad del texto */
+.overlay {
+  background: rgba(61, 228, 10, 0.5);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Menú sencillo */
+nav {
+  margin-bottom: 20px;
+}
+nav a {
+  color: blue;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #00c3ff;
+}
+________________________________________________________________________________________________________
+
+
+pagina web en un solo index 
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundación Proserco</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Íconos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    .hero {
+      background: url("assets/hero.jpg") center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; font-weight: bold; }
+    .hero p { font-size: 1.2rem; }
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 20px 0;
+    }
+    footer a { color: #ff6600; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Fundación Proserco</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programas">Programas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 HERO -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h1>Bienvenidos a Fundación Proserco</h1>
+      <p>Programas educativos, culturales y familiares al servicio de la comunidad</p>
+      <a href="#programas" class="btn btn-warning btn-lg mt-3">Conoce nuestros programas</a>
+    </div>
+  </section>
+
+  <!-- 🔹 NOSOTROS -->
+  <section id="nosotros" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Sobre Nosotros</h2>
+      <p class="mb-5">La Fundación Proserco trabaja en programas de servicio comunitario,
+         fomentando la educación, la cultura y el bienestar familiar.</p>
+    </div>
+  </section>
+
+  <!-- 🔹 PROGRAMAS -->
+  <section id="programas" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Nuestros Programas</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow-sm bg-white">
+            <i class="bi bi-book-half fs-1 text-primary"></i>
+            <h5 class="mt-3">Educación</h5>
+            <p>Capacitaciones y apoyo escolar para niños y jóvenes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow-sm bg-white">
+            <i class="bi bi-music-note-beamed fs-1 text-danger"></i>
+            <h5 class="mt-3">Cultura</h5>
+            <p>Eventos culturales, arte, danza y música para la comunidad.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow-sm bg-white">
+            <i class="bi bi-people-fill fs-1 text-success"></i>
+            <h5 class="mt-3">Familias</h5>
+            <p>Programas de acompañamiento y fortalecimiento familiar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 NOTICIAS -->
+  <section id="noticias" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Noticias y Eventos</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets/programa1.jpg" class="img-fluid rounded mb-3" alt="Evento 1">
+          <h5>Evento 1</h5>
+          <p>Descripción breve del evento.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/programa2.jpg" class="img-fluid rounded mb-3" alt="Evento 2">
+          <h5>Evento 2</h5>
+          <p>Descripción breve del evento.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/programa3.jpg" class="img-fluid rounded mb-3" alt="Evento 3">
+          <h5>Evento 3</h5>
+          <p>Descripción breve del evento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 CONTACTO -->
+  <section id="contacto" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Contáctanos</h2>
+      <form id="contact-form" class="row g-3 justify-content-center">
+        <div class="col-md-5">
+          <input type="text" class="form-control" name="user_name" placeholder="Tu nombre" required>
+        </div>
+        <div class="col-md-5">
+          <input type="email" class="form-control" name="user_email" placeholder="Tu correo" required>
+        </div>
+        <div class="col-md-10">
+          <textarea class="form-control" rows="4" name="message" placeholder="Tu mensaje" required></textarea>
+        </div>
+        <div class="col-md-10">
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Fundación Proserco - Todos los derechos reservados</p>
+      <div>
+        <a href="#"><i class="bi bi-facebook fs-4 mx-2"></i></a>
+        <a href="#"><i class="bi bi-instagram fs-4 mx-2"></i></a>
+        <a href="#"><i class="bi bi-youtube fs-4 mx-2"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("Eliana1468*"); // 🔹 pon tu Public Key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
+        .then(() => {
+          alert("✅ Mensaje enviado con éxito. ¡Gracias por contactarnos!");
+          this.reset();
+        }, (err) => {
+          alert("❌ Error al enviar: " + JSON.stringify(err));
+        });
+    });
+  </script>
+</body>
+</html>
